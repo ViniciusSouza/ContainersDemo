@@ -48,3 +48,42 @@ Now we have to execute the image, using.
 ``` bash
 docker run -d -p 7000:80 visouza/httpd:demo
 ```
+
+![Sample page](./images/web-sample.png)
+
+## Pushing the image
+
+Now that we have tested our image, we can push it to a Container Registry and our case the Docker Container Registry [Docker Hub](https://hub.docker.com/)
+
+First we need to have an account, go to sign up if you don't have one.
+
+At your terminal type
+
+``` bash
+docker login
+```
+
+Enter your user and password.
+
+Before pushing the image we have to be sure that we are using the right name.
+
+To use Docker Hub our image have to be in this format.
+
+``` MD
+<docker hub user>/<image name>:<tag>
+```
+
+In our case.
+
+``` MD
+docker push visouza/httpd:demo
+
+The push refers to repository [docker.io/visouza/httpd]
+d4ae6187d389: Pushed
+026f9bea4fc4: **Mounted from library/httpd**
+de926190eb0b: **Mounted from library/httpd**
+920e7ca5de49: **Mounted from library/httpd**
+143e72edeb6d: **Mounted from library/httpd**
+ef68f6734aa4: **Mounted from library/httpd**
+demo: digest: sha256:dd87c8e10b4f3f6e8f8f045072c98750f3ca8aaaae092c81a3b6e4d60accfc21 size: 1574
+```
