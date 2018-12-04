@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aci-helloworld-windows
+  labels:
+    app: aci-helloworld-windows
+spec:
+  ports:
+  - port: 80
+    name: http
+    targetPort: 80
+  selector:
+    app: aci-helloworld-windows
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aci-helloworld-windows
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aci-helloworld-windows
+  template:
+    metadata:
+      labels:
+        app: aci-helloworld-windows
+    spec:
+      containers:
+      - name: aci-helloworld-windows
+        image: microsoft/iis:nanoserver
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: windows
+        kubernetes.io/role: agent
+        type: virtual-kubelet
+      tolerations:
+      - key: virtual-kubelet.io/provider
+        operator: Equal
+        value: azure
+        effect: NoSchedule

@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aci-helloworld-linux
+  labels:
+    app: aci-helloworld-linux
+spec:
+  ports:
+  - port: 80
+    name: http
+    targetPort: 80
+  selector:
+    app: aci-helloworld-linux
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aci-helloworld-linux
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aci-helloworld-linux
+  template:
+    metadata:
+      labels:
+        app: aci-helloworld-linux
+    spec:
+      containers:
+      - name: aci-helloworld-linux
+        image: microsoft/aci-helloworld
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+        kubernetes.io/role: agent
+        type: virtual-kubelet
+      tolerations:
+      - key: virtual-kubelet.io/provider
+        operator: Equal
+        value: azure
+        effect: NoSchedule
