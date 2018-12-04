@@ -153,14 +153,18 @@ spec:
 To star using it lets deploy to containers, linux and windows.
 
 ''' bash
+
 kubectl apply -f 1-ACI-helloworld-linux.yaml
 kubectl apply -f 2-ACI-helloworld-windows.yaml
+
 '''
 
 Run the command to wait until you got the public ip
 
 ''' bash
+
 kubectl get services -w
+
 '''
 
 Open the browser and test it using the public external IP.
