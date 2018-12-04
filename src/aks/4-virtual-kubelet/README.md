@@ -14,9 +14,9 @@ When using the Virtual Kubelet provider for Azure Container Instances, both Linu
 
 We are going to use *az aks install-connector* which uses helm to get the service done check it at [GitHub](https://github.com/virtual-kubelet/virtual-kubelet/tree/master/providers/azure).
 
-''' bash
+``` bash
 az aks install-connector --resource-group aks-demo --name aks-demo --connector-name virtual-kubelet --os-type Both
-'''
+```
 
 This command used the aks-demo name, change that to match your environment.
 
@@ -152,19 +152,19 @@ spec:
 
 To star using it lets deploy to containers, linux and windows.
 
-''' bash
+``` bash
 
 kubectl apply -f 1-ACI-helloworld-linux.yaml
 kubectl apply -f 2-ACI-helloworld-windows.yaml
 
-'''
+```
 
 Run the command to wait until you got the public ip
 
-''' bash
+``` bash
 
 kubectl get services -w
 
-'''
+``` 
 
 Open the browser and test it using the public external IP.
