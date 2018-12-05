@@ -83,3 +83,24 @@ kubectl get nodes
 '''
 
 As we already have three nodes at minimum the agent nodes will take some time to scale, but it will. To speed things, you can run more than one load-test.sh process.
+
+
+After some time execute the command
+
+``` bash
+kubectl get nodes
+```
+
+You will notice a new node as part of our agent cluster.
+
+``` bash
+NAME                                             STATUS    ROLES     AGE       VERSION
+aks-nodepool1-16725936-0                         Ready     agent     1d        v1.11.5
+aks-nodepool1-16725936-1                         Ready     agent     1d        v1.11.5
+aks-nodepool1-16725936-2                         Ready     agent     1d        v1.11.5
+aks-nodepool1-16725936-3                         Ready     agent     1m        v1.11.5
+virtual-kubelet-virtual-kubelet-linux-eastus     Ready     agent     1d        v1.11.2
+virtual-kubelet-virtual-kubelet-windows-eastus   Ready     agent     1d        v1.11.2
+```
+
+Stop de script to see the numbers of nodes going to it's original state, repecting the minimum number of node for the pool.
