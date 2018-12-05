@@ -51,7 +51,7 @@ Then execute the load-test script.
 ./load-test `<ip address>` `<time to wait between requests>`
 
 ``` bash
-./load-test 127.0.0.1 0
+./load-test 127.0.0.1 0 1
 ```
 
 In another terminal execute

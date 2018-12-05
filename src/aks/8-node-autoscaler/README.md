@@ -46,6 +46,8 @@ You can use multiple Cluster Autoscaler for each cluster label.
 
 The Cluster Autoscaler deploymet by default set the minimun numbers of agent to 1 and the maximmum to 10.
 
+OBS: If you have more agent nodes in your cluster after the deployment of cluster autoscaler with the minimun of 1, it will scale down the number of cluster.
+
 To change that update the yaml with de desire state
 
 ``` md
@@ -65,7 +67,7 @@ kubectl apply -f aks-cluster-autoscaler.yaml
 Test it using the pod-scaling demo, HPA must to be in place for this demo being able to work.
 
 ''' md
-../7-pod-scaling/load-test.sh '<external ip>' 0
+../7-pod-scaling/load-test.sh `<external ip>` 0
 '''
 
 Check the pods, after 2 minutes the number of pods will start to grow.
