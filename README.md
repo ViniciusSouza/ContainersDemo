@@ -1,20 +1,23 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# ContainersDemo
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This repo contains a Set of demos to help you start using Docker Containers and AKS (Azure Kubernetes Services), the main focus is the AKS.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## What do we have here
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Docker 101
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- [01-pull-image](./src/docker/01-pull_image/README.md)
+- [02-Image](./src/docker/02-Image/README.md)
+
+AKS (Azure Kubernetes Service)
+
+- [1-create](./src/aks/1-create/create-aks.sh)
+- [2-network-policy](./src/aks/2-network-policy/README.md)
+- [3-helm](./src/aks/3-helm/README.md)
+- [4-virtual-kubelet](./src/aks/4-virtual-kubelet/README.md)
+- [5-acr](./src/aks/5-acr/README.md)
+- [6-osba](./src/aks/6-osba/README.md)
+- [7-pod-scaling](./src/aks/7-pod-scaling/README.md)
+- [8-node-autoscaler](./src/aks/8-node-autoscaler/README.md)
+- [9-monitoring](./src/aks/9-monitoring/README.md)
+- [10-azure-dev-spaces](./src/aks/10-azure-dev-spaces/README.md)
