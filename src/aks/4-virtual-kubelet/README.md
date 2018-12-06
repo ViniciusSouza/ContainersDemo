@@ -9,7 +9,6 @@ When using the Virtual Kubelet provider for Azure Container Instances, both Linu
 - Azure CLI 2.0.33 or later
 - Helm have to be installed in your Kubernetes
 
-
 ## Installing
 
 We are going to use *az aks install-connector* which uses helm to get the service done check it at [GitHub](https://github.com/virtual-kubelet/virtual-kubelet/tree/master/providers/azure).

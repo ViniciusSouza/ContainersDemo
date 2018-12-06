@@ -7,7 +7,9 @@ LOCATION=eastus
 VnetName="aks-vnet-demo"
 SubnetName="aks-subnet"
 
+
 #Install az aks-cli & kubectl
+#Uncomment the line if you want to install Kubectl in you environment
 #sudo az aks install-cli
 
 #Create azure resources
