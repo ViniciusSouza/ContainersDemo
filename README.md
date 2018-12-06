@@ -6,13 +6,13 @@ This repo contains a Set of demos to help you start using Docker Containers and 
 
 Docker 101
 
-- [01-pull-image](./src/docker/01-pull_image/README.md)
-- [02-Image](./src/docker/02-Image/README.md)
+- [01-pull-image](./src/docker/01-pull_image/README.MD)
+- [02-Image](./src/docker/02-Image/README.MD)
 
 AKS (Azure Kubernetes Service)
 
 - [1-create](./src/aks/1-create/create-aks.sh)
-- [2-network-policy](./src/aks/2-network-policy/README.md)
+- [2-network-policy](./src/aks/2-network-policy/README.MD)
 - [3-helm](./src/aks/3-helm/README.md)
 - [4-virtual-kubelet](./src/aks/4-virtual-kubelet/README.md)
 - [5-acr](./src/aks/5-acr/README.md)
